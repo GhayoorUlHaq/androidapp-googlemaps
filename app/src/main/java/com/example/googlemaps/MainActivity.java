@@ -2,6 +2,7 @@ package com.example.googlemaps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -49,10 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (username.getText().toString().equals( "ghayoor") && password.getText().toString().equals("00000")){
 
-                    Toast toast = Toast.makeText(getApplicationContext(),
-                            "Logined",
-                            Toast.LENGTH_SHORT);
-                    toast.show();
+                    Intent i = new Intent(MainActivity.this, maps.class);
+                    startActivity(i);
+                    finish();
 
                 }else{
                     Toast toast = Toast.makeText(getApplicationContext(),
