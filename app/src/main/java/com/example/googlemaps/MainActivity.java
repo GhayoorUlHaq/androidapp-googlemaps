@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(TextUtils.isEmpty(username.getText().toString())) {
                     username.setError("Username is Required");
                     return;
@@ -46,10 +47,21 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                Toast toast = Toast.makeText(getApplicationContext(),
-                        "Logined",
-                        Toast.LENGTH_SHORT);
-                toast.show();
+                if (username.getText().toString().equals( "ghayoor") && password.getText().toString().equals("00000")){
+
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Logined",
+                            Toast.LENGTH_SHORT);
+                    toast.show();
+
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Wrong Credentials",
+                            Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+
+
 
             }
         });
