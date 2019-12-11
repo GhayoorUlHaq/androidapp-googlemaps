@@ -15,6 +15,8 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE users (_id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)";
         db.execSQL(query);
+
+        this.insertData("ghayoor", "00000");
     }
 
 
